@@ -14,15 +14,21 @@
 		max-width: $max-width;
 		margin: 0px auto;
 
+
 		.Brand {
-			color: rgba(252,252,252,0.9);
-			line-height: 0.5rem;
 
-			&:hover {
-				cursor: default;
-				color: rgba(252,252,252,0.96);
+			a {
+				text-decoration: none;
+				color: rgba(252,252,252,0.9);
+				line-height: 0.5rem;
 
-			} // Brand:hover
+				&:hover {
+					cursor: pointer;
+					color: rgba(252,252,252,0.96);
+
+				} // a:hover
+
+			} // a
 
 		} // Brand
 
@@ -37,9 +43,11 @@
 				height: 2rem;
 				align-self: center;				
 				border: 1px rgba(252,252,252,0) solid;
+				transition: 0.5s;
 
 				&:hover {
-					border: 1px rgba(252,252,252,1) solid;
+					background-image: url('../../resources/gravityFx1_compressed.gif');
+					border: 1px rgba(252,252,252,0.6) solid;
 					color: rgb(252,252,252);
 
 				} // a:hover

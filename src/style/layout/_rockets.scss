@@ -1,10 +1,39 @@
 .RocketsC {
 	color: white;
-	display: flex;
+	width: 100%;
+	max-width: $max-width;
+	margin: 92px auto 0px auto;
+	display: grid;
+	grid-gap: 25px;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-evenly;
+	text-align: center;
 
-	img {
-		max-height: 300px;
-	}
+	.SkuPreviewC {
+		border: 1px grey solid;
 
+
+		img {
+
+			height: 300px;
+
+		} // img
+
+
+	} // SkuPreviewC
+
+	@include respond-to('medium') {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 800px;
+
+
+	} // media query - medium
+
+	@include respond-to('small') {
+		grid-template-columns: repeat(1, 1fr);
+		width: 400px;
+		max-width: 100%;
+
+	} // media query - small
 
 } // RocketsC

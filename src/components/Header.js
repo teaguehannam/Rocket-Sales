@@ -1,7 +1,5 @@
 import React from 'react';
 
-import BGFX from '../resources/gravityFx1.gif';
-
 function Header() {
 	
 	
@@ -10,8 +8,9 @@ function Header() {
 
 			<div className="Content">
 				<div className="Brand">
-					<img src={BGFX} alt="Cool effects" />
-					<h2>Rocketzon</h2>
+					<a href="https://rocket-sales.netlify.app/">
+						Rocketzon
+					</a>
 				</div>
 
 				<nav>
