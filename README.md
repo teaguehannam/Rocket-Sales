@@ -1,3 +1,8 @@
 # Rocket-Sales
 
-#### Example of selling proucts online
+#### Online store example
+
+##### - Using -
+- React
+- Redux
+- SASS
