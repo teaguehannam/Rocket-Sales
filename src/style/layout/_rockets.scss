@@ -12,6 +12,46 @@
 	.SkuPreviewC {
 		border: 1px grey solid;
 
+		.Title {
+		} // Title
+
+		.Preview {
+			width: 80%;
+			margin: 0px auto;
+			border-top: 1px grey solid;
+			border-bottom: 1px grey solid;
+			padding: 20px 0px 10px 0px;
+
+		} // Preview (img thumbnail) 
+
+		.Stats {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			cursor: default;
+
+			.Box {
+			
+				p {
+					line-height: 1rem;
+
+				} // p
+
+			} // Box
+
+			.Box:nth-of-type(1) {
+				grid-column: 1 / span 2;
+				min-width: 200px;
+				margin: 0px auto;	
+
+				p {
+					line-height: 0.25rem;
+
+				} // p
+
+			} // First two boxes
+
+
+		} // Stats
 
 		img {
 
@@ -25,7 +65,6 @@
 	@include respond-to('medium') {
 		grid-template-columns: repeat(2, 1fr);
 		max-width: 800px;
-
 
 	} // media query - medium
 
