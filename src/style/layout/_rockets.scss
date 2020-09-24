@@ -74,6 +74,13 @@
 
 	} // Firefox only
 
+	@include respond-to('large') {
+		margin: 4rem auto 0px auto;
+		grid-template-columns: repeat(6, 1fr);
+		width: 100%;
+		max-width: 1920px;
+	} // media query - large
+
 	@include respond-to('medium') {
 		grid-template-columns: repeat(2, 1fr);
 		max-width: 800px;

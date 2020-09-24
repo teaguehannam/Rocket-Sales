@@ -13,9 +13,12 @@ function Header() {
 
 				<nav>
 					<Link to="/rockets">Rockets</Link>
-					<Link to="/">Account</Link>
-					<Link to="/checkout"><span role="img" aria-label="Cart Logo">🛒</span></Link>
+					<Link to="/account">Account</Link>
+					<Link to="/checkout">
+						<span role="img" aria-label="Cart Logo">🛒</span>
+					</Link>
 				</nav>
+				
 			</div>
 
 		</div>

@@ -1,0 +1,62 @@
+.HomeC {
+	height: calc(100vh - 5rem);
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	text-align: center;
+
+	a {
+		text-decoration: none;
+		color: rgba(252,252,252,0.8);
+
+		&:hover {
+			color: rgba(242,235,252,1);
+
+		} // a:hover
+	
+	} // a
+
+	div:nth-of-type(1),	div:nth-of-type(2), div:nth-of-type(3) {
+		width: 100%;
+		max-width: 500px;
+		margin: 5px auto;
+		background-color: rgba(19,19,19,0.75);
+		border: 1px grey solid;
+		border-radius: 12px;
+		// backdrop-filter: blur(12px);
+
+	} // first 3 divs
+
+	.Intro {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+		line-height: 5rem;
+
+	} // Intro
+
+	.RocketPreview {
+		grid-column: 1 / span 1;
+		grid-row: 2/ span 1;
+
+	} // RocketPreview
+
+	.Account, div:nth-of-type(3) {
+		grid-column: 1 / span 1;
+		grid-row: 3 / span 1;
+		line-height: 6rem;
+
+	} // Account
+
+	.PS {
+ 		grid-column: 1 / span 1;
+		grid-row: 5 / span 1;
+		justify-self: flex-end;
+		padding-right: 100px;
+
+		p {
+			font-size: 0.75rem;
+		} // p
+
+	} // PS
+
+} // HomeC
