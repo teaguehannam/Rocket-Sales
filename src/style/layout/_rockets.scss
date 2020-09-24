@@ -2,15 +2,20 @@
 	color: white;
 	width: 100%;
 	max-width: $max-width;
-	margin: 92px auto;
+	margin: 1rem auto; // 2 rem height
 	display: grid;
 	grid-gap: 25px;
 	grid-template-columns: repeat(3, 1fr);
 	justify-content: space-evenly;
 	text-align: center;
+	overflow: auto;
+	max-height: calc(100vh - 6rem); // 4 rem header
+	padding: 0px 12px;
 
 	.SkuPreviewC {
 		border: 1px grey solid;
+		background-color: rgba(42,42,42,0.25);
+		backdrop-filter: blur(12px);
 
 		.Title {
 		} // Title
@@ -54,13 +59,20 @@
 		} // Stats
 
 		img {
-
 			height: 300px;
 
 		} // img
 
 
 	} // SkuPreviewC
+
+	@-moz-document url-prefix() { 
+
+		.SkuPreviewC {
+			background-color: rgba(19,19,19,0.8);
+		}
+
+	} // Firefox only
 
 	@include respond-to('medium') {
 		grid-template-columns: repeat(2, 1fr);

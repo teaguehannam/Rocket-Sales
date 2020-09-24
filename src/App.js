@@ -5,7 +5,9 @@ import Header from './components/Header.js';
 import Rockets from './components/Rockets.js';
 import Checkout from './components/Checkout.js';
 
+
 function App() {
+
 	return (
 		<div className="App">
 

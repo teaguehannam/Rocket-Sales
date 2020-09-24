@@ -1,0 +1,16 @@
+body, html {
+    background-color: unset;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+canvas {
+    height: 100vh;
+    z-index: -1;
+    position:absolute;
+    top:3rem;
+    left:0;
+}
