@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 function Header() {
 	
@@ -8,17 +8,13 @@ function Header() {
 
 			<div className="Content">
 				<div className="Brand">
-					<a href="https://rocket-sales.netlify.app/">
-						Rocketzon
-					</a>
+					<Link to="/">Rocketzon</Link>
 				</div>
 
 				<nav>
-					<a href="/rockets">Rockets</a>
-					{/* eslint-disable-next-line */}
-					<a href="#">Customize</a>
-					{/* eslint-disable-next-line */}
-					<a href="#">Checkout</a>
+					<Link to="/rockets">Rockets</Link>
+					<Link to="/">Account</Link>
+					<Link to="/checkout"><span role="img" aria-label="Cart Logo">🛒</span></Link>
 				</nav>
 			</div>
 
