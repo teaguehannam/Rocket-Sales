@@ -1,8 +1,3 @@
 # Rocket-Sales
 
-#### Online store example
-
-##### - Using -
-- React
-- Redux
-- SASS
+#### eCommerce store exmaple, with shopping cart
