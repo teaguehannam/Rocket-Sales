@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Header from './components/Header.js';
-import Home from './components/Home.js';
-import SmartShop from './components/SmartShop.js';
-import Rockets from './components/Rockets.js';
-import Account from './components/Account.js';
-import Checkout from './components/Checkout.js';
+import Header from './components/Header.jsx';
+import Home from './components/Home.jsx';
+import SmartShop from './components/SmartShop.jsx';
+import Rockets from './components/Rockets.jsx';
+import Account from './components/Account.jsx';
+import Checkout from './components/Checkout.jsx';
 
 
 function App() {

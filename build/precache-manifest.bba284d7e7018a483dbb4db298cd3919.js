@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "228b69be1eb816ffad98977d166c5153",
+    "revision": "6932e65ea0f9bba0772f32c40bd24907",
     "url": "/index.html"
   },
   {
-    "revision": "03c56ce0860520848ffb",
-    "url": "/static/css/main.1db468be.chunk.css"
+    "revision": "0d1f642c2033ef46bf65",
+    "url": "/static/css/main.c5d5923d.chunk.css"
   },
   {
     "revision": "c45418e7a7ce113f5c75",
@@ -16,24 +16,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.6f066f7b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "03c56ce0860520848ffb",
-    "url": "/static/js/main.71f3bea8.chunk.js"
+    "revision": "0d1f642c2033ef46bf65",
+    "url": "/static/js/main.6554a46a.chunk.js"
   },
   {
     "revision": "ec9875811aa0f00c2e31",
     "url": "/static/js/runtime-main.92ee656d.js"
   },
   {
-    "revision": "6946bb65615b745ab66c7255e89ad3f2",
-    "url": "/static/media/atlasIV.6946bb65.png"
+    "revision": "028f181b01feb6523d771e462df7dc97",
+    "url": "/static/media/atlasIV.028f181b.png"
   },
   {
     "revision": "0ec2142be2824877a64737de5cdab429",
     "url": "/static/media/deltaVheavy.0ec2142b.png"
   },
   {
-    "revision": "0c8a524492f54ca11e8e22e38666f080",
-    "url": "/static/media/electron.0c8a5244.png"
+    "revision": "a1667f8738498fb3c6d6e7637d2347c5",
+    "url": "/static/media/electron.a1667f87.png"
   },
   {
     "revision": "64df7a3c218b089dbf48f2005b669ccb",

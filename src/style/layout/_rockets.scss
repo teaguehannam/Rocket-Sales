@@ -11,11 +11,18 @@
 	overflow: auto;
 	max-height: calc(100vh - 6rem); // 4 rem header
 	padding: 0px 12px;
+	// Disable highlighting text
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	transition: 0.25s;
 
 	.SkuPreviewC {
 		border: 1px grey solid;
 		background-color: rgba(42,42,42,0.25);
-		backdrop-filter: blur(12px);
+		backdrop-filter: blur(12px); // Chromium browsers only
+		cursor: pointer;
 
 		.Title {
 		} // Title
@@ -32,7 +39,6 @@
 		.Stats {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			cursor: default;
 
 			.Box {
 			
@@ -63,16 +69,33 @@
 
 		} // img
 
-
 	} // SkuPreviewC
 
-	@-moz-document url-prefix() { 
+	&:hover {
+		background-color: rgba(19,19,19,0.2);
 
 		.SkuPreviewC {
-			background-color: rgba(19,19,19,0.8);
-		}
+			filter: blur(2px);
+			opacity: 0.25;
+			transition: background-color 1s;
+			transition: opacity 1s;
 
-	} // Firefox only
+			&:hover {
+				background-color: rgba(194,194,194,0.2);
+				filter: unset; // blur
+				opacity: 1;
+				
+
+			} // SkuPreviewC:hover
+
+		} // SkuPreview
+
+	} // RocketsC:hover
+
+	.SelectedRocket {
+		background-color: rgba(214,214,214,0.25);
+		border: 1px rgba(252,252,252,0.85) solid;
+	} // SelectedRocket
 
 	@include respond-to('large') {
 		margin: 4rem auto 0px auto;
@@ -84,14 +107,20 @@
 	@include respond-to('medium') {
 		grid-template-columns: repeat(2, 1fr);
 		max-width: 800px;
-
 	} // media query - medium
 
 	@include respond-to('small') {
 		grid-template-columns: repeat(1, 1fr);
 		width: 400px;
 		max-width: 100%;
-
 	} // media query - small
+
+	@-moz-document url-prefix() { 
+
+		.SkuPreviewC {
+			background-color: rgba(19,19,19,0.8);
+		}
+
+	} // Firefox only
 
 } // RocketsC
