@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header(props) {
+	// console.log("Header", props);
 	
 	return (
 		<div className="HeaderC">
@@ -13,9 +14,9 @@ function Header() {
 
 				<nav>
 					<Link to="/rockets">Rockets</Link>
-					<Link to="/account">Account</Link>
-					<Link to="/checkout">
-						<span role="img" aria-label="Cart Logo">🛒</span>
+					<Link to="/flight_plan">Flight Plan</Link>
+					<Link to="/launch">
+						<span role="img" aria-label="Rocket">🚀</span>
 					</Link>
 				</nav>
 				

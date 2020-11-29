@@ -1,16 +1,23 @@
 import React from 'react';
-
+import { useDispatch } from 'react-redux';
+import { chooseRocket } from '../store/rocket.js';
 
 const SkuPreview = props => {
-	//console.log("SkuPreview", props);
+	// console.log("SkuPreview", props);
+	
+	const dispatch = useDispatch();
+	let SkuData = props.data;
+	
+	const selectSku = () => {
+		dispatch(chooseRocket(SkuData));
+	}
 
 	let successRate = Math.round((props.data.totalLaunches - props.data.failedLaunches) / props.data.totalLaunches * 100);
-	
-	
-	
-	return (
+
+	return (		
 		
-		<div className="SkuPreviewC">
+		<div className="SkuPreviewC" id={props.data.title}
+			onClick={selectSku} >
 
 			<div className="Title">
 				<h2>{props.data.title}</h2>

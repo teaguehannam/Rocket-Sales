@@ -2,77 +2,148 @@
 	color: white;
 	width: 100%;
 	max-width: $max-width;
-	margin: 1rem auto; // 2 rem height
-	display: grid;
-	grid-gap: 25px;
-	grid-template-columns: repeat(3, 1fr);
-	justify-content: space-evenly;
 	text-align: center;
-	overflow: auto;
-	max-height: calc(100vh - 6rem); // 4 rem header
-	padding: 0px 12px;
-	// Disable highlighting text
-	user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	transition: 0.25s;
+	margin: 0.5rem auto; // 2 rem height
 
-	.SkuPreviewC {
-		border: 1px grey solid;
-		background-color: rgba(42,42,42,0.25);
-		backdrop-filter: blur(12px); // Chromium browsers only
-		cursor: pointer;
+	.Title {
+		grid-column: 1 / span 3;
+		height: 6rem;
+	}
 
-		.Title {
-		} // Title
+	.RocketSkus {
+		padding: 12px;
+		display: grid;
+		grid-gap: 25px;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-evenly;
+		overflow: auto;
+		max-height: calc(100vh - 12rem); // 4 rem header, 8 rem title
+		// Disable highlighting text
+		user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		transition: 0.25s;
 
-		.Preview {
-			width: 80%;
-			margin: 0px auto;
-			border-top: 1px grey solid;
-			border-bottom: 1px grey solid;
-			padding: 20px 0px 10px 0px;
+		.SkuPreviewC {
+			border: 1px grey solid;
+			background-color: rgba(42,42,42,0.25);
+			backdrop-filter: blur(12px); // Chromium browsers only
+			cursor: pointer;
 
-		} // Preview (img thumbnail) 
+			.Title {
+			} // Title
 
-		.Stats {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			.Preview {
+				width: 80%;
+				margin: 0px auto;
+				border-top: 1px grey solid;
+				border-bottom: 1px grey solid;
+				padding: 20px 0px 10px 0px;
 
-			.Box {
-			
-				p {
-					line-height: 1rem;
+			} // Preview (img thumbnail) 
 
-				} // p
+			.Stats {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
 
-			} // Box
+				.Box {
+				
+					p {
+						line-height: 1rem;
 
-			.Box:nth-of-type(1) {
-				grid-column: 1 / span 2;
-				min-width: 200px;
-				margin: 0px auto;	
+					} // p
 
-				p {
-					line-height: 0.25rem;
+				} // Box
 
-				} // p
+				.Box:nth-of-type(1) {
+					grid-column: 1 / span 2;
+					min-width: 200px;
+					margin: 0px auto;	
 
-			} // First two boxes
+					p {
+						line-height: 0.25rem;
+
+					} // p
+
+				} // First two boxes
 
 
-		} // Stats
+			} // Stats
 
-		img {
-			height: 300px;
+			img {
+				height: 300px;
 
-		} // img
+			} // img
 
-	} // SkuPreviewC
+		} // SkuPreviewC
+
+		.Active {
+			border: 1px grey solid;
+			background-color: rgba(42,42,42,0.25);
+			backdrop-filter: blur(12px); // Chromium browsers only
+			cursor: pointer;
+			box-shadow:
+				inset 0 0 50px rgba(252,252,252,0.25),
+				inset 20px 0 80px rgba(252,0,252,0.25),
+				inset -20px 0 80px rgba(0,252,252,0.25),
+				inset 20px 0 300px rgba(252,0,252,0.25),
+				inset -20px 0 300px rgba(0,252,252,0.25),
+				0 0 5px rgba(252,252,252,0.5),
+				-5px 0 20px rgba(252,0,252,0.5),
+				5px 0 20px rgba(0,252,252,0.5);
+
+
+			.Title {
+
+			} // Title
+
+			.Preview {
+				width: 80%;
+				margin: 0px auto;
+				border-top: 1px grey solid;
+				border-bottom: 1px grey solid;
+				padding: 20px 0px 10px 0px;
+
+			} // Preview (img thumbnail) 
+
+			.Stats {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+
+				.Box {
+				
+					p {
+						line-height: 1rem;
+
+					} // p
+
+				} // Box
+
+				.Box:nth-of-type(1) {
+					grid-column: 1 / span 2;
+					min-width: 200px;
+					margin: 0px auto;	
+
+					p {
+						line-height: 0.25rem;
+
+					} // p
+
+				} // First two boxes
+
+			} // Stats
+
+			img {
+				height: 300px;
+
+			} // img
+
+		} // Active
+
+	} // RocketSkus
 
 	&:hover {
-		background-color: rgba(19,19,19,0.2);
 
 		.SkuPreviewC {
 			filter: blur(2px);
@@ -84,6 +155,15 @@
 				background-color: rgba(194,194,194,0.2);
 				filter: unset; // blur
 				opacity: 1;
+				box-shadow:
+						inset 0 0 50px rgba(252,252,252,0.125),
+						inset 20px 0 80px rgba(252,0,252,0.125),
+						inset -20px 0 80px rgba(0,252,252,0.125),
+						inset 20px 0 300px rgba(252,0,252,0.125),
+						inset -20px 0 300px rgba(0,252,252,0.125),
+						0 0 5px rgba(252,252,252,0.05),
+						-5px 0 20px rgba(252,0,252,0.05),
+						5px 0 20px rgba(0,252,252,0.05);
 				
 
 			} // SkuPreviewC:hover
@@ -98,21 +178,46 @@
 	} // SelectedRocket
 
 	@include respond-to('large') {
-		margin: 4rem auto 0px auto;
-		grid-template-columns: repeat(6, 1fr);
-		width: 100%;
 		max-width: 1920px;
+		
+		.Title {
+			grid-column: 1 / span 6;
+		}
+
+		.RocketSkus {
+			margin: 4rem auto 0px auto;
+			grid-template-columns: repeat(6, 1fr);
+			width: 100%;
+		}
+
 	} // media query - large
 
 	@include respond-to('medium') {
-		grid-template-columns: repeat(2, 1fr);
 		max-width: 800px;
+		
+
+		.Title {
+			grid-column: 1 / span 2;
+		}
+
+		.RocketSkus {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
 	} // media query - medium
 
 	@include respond-to('small') {
-		grid-template-columns: repeat(1, 1fr);
 		width: 400px;
 		max-width: 100%;
+		
+		.Title {
+			grid-column: 1 / span 1;
+		}
+
+		.RocketSkus {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		
 	} // media query - small
 
 	@-moz-document url-prefix() { 

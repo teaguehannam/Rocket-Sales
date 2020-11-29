@@ -19,9 +19,10 @@
 
 // 4. Layout-related sections
 @import
+  'layout/flightPlan',
   'layout/header',
-  'layout/checkout',
   'layout/home',
+  'layout/launch',
   'layout/rockets';
 
 // 5. Components
