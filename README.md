@@ -6,3 +6,5 @@ React, Redux, Node
 - Attach payload
 - Flight Summary
 - Launch
+#### Bugs:
+- Update canvas background dimensions on window resize
