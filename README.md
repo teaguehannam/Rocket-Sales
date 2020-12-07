@@ -2,9 +2,9 @@
 #### Built with:
 React, Redux, Node
 #### To do:
-- Select flight type
-- Attach payload
+- Add trip to store
+- Add payload to store
 - Flight Summary
 - Launch
 #### Bugs:
-- Update canvas background dimensions on window resize
+- Dynamic canvas size
